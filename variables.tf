@@ -7,12 +7,12 @@ variable "network" {
 }
 
 variable "source_ranges" {
-  type = string
+  type = list
   description = "A list of source CIDR ranges that this firewall applies to. Can't be used for EGRESS"
 }
 
 variable "target_tags" {
-  type = string
+  type = list
   description = "A list of target tags for this firewall"
 }
 
@@ -21,6 +21,6 @@ variable "protocol" {
 }
 
 variable "ports" {
-  type = string
+  type = list
   description = "List of ports and/or port ranges to allow. This can only be specified if the protocol is TCP or UDP"
 }
