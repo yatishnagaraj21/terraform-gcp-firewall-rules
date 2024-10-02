@@ -1,6 +1,6 @@
 resource "google_compute_firewall" "fw-rule" {
 #  name      = "${var.network}-${var.name}"
-  name = "${substr(var.network, 0, 30)}-${substr(var.name, 0, 30)}"
+  name = "${var.name}"
   network   = "${var.network}"
   description = "Creates Firewall rule targetting tagged instances"
 
